@@ -1,0 +1,10 @@
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\gasto\OneDrive\Desktop\ISFT 11\2AÑO\2 Cuatrimestre\SEMINARIO 1\4 CLASE MENUES\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
