@@ -1,0 +1,33 @@
+#Para un proyecto en Visual Studio (WinForms):
+
+# Archivos de configuración de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos generados por compilación
+*.exe
+*.pdb
+*.cache
+
+#Para proyectos en general:
+
+# Archivos y carpetas temporales
+*.log
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de configuración del entorno
+.env
