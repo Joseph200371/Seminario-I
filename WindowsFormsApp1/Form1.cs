@@ -112,5 +112,10 @@ namespace WindowsFormsApp1
 
             //MessageBox.Show(reserva);
         }
+
+        private void cbxTipoEvento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
