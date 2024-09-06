@@ -12,10 +12,11 @@ T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.con
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Iniciar_Sesion.resources
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.RegistrosDeEventos.resources
+T:\JM_ES\Desktop\Seminario-I\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registrarse.resources

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\iniciar sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:iniciar sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\iniciar sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\iniciar sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:iniciar sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\iniciar sesion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:iniciar sesion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\registrarse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:registrarse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\registrosdeeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:registrosdeeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|t:\\jm_es\\desktop\\seminario-i\\windowsformsapp1\\registrosdeeventos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{817A636D-C303-476D-919A-DD59C553D516}|WindowsFormsApp1.csproj|solutionrelative:registrosdeeventos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,23 +25,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 205,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 242,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Iniciar Sesion.Designer.cs",
-              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.Designer.cs",
-              "RelativeDocumentMoniker": "Iniciar Sesion.Designer.cs",
-              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.Designer.cs",
-              "RelativeToolTip": "Iniciar Sesion.Designer.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAowC0AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T18:00:27.337Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -57,53 +43,72 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 75,
+          "SelectedChildIndex": 5,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Iniciar Sesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.cs",
-              "RelativeDocumentMoniker": "Iniciar Sesion.cs",
-              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Iniciar Sesion.cs [Dise\u00F1o]",
+              "Title": "Registrarse.cs",
+              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Registrarse.cs",
+              "RelativeDocumentMoniker": "Registrarse.cs",
+              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Registrarse.cs",
+              "RelativeToolTip": "Registrarse.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowD0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T17:41:39.363Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-09-06T21:23:30.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegistrosDeEventos.Designer.cs",
+              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\RegistrosDeEventos.Designer.cs",
+              "RelativeDocumentMoniker": "RegistrosDeEventos.Designer.cs",
+              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\RegistrosDeEventos.Designer.cs",
+              "RelativeToolTip": "RegistrosDeEventos.Designer.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAswEsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T21:01:16.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "RegistrosDeEventos.cs",
+              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\RegistrosDeEventos.cs",
+              "RelativeDocumentMoniker": "RegistrosDeEventos.cs",
+              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\RegistrosDeEventos.cs",
+              "RelativeToolTip": "RegistrosDeEventos.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAWwGcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T14:09:05.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Iniciar Sesion.cs",
               "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.cs",
               "RelativeDocumentMoniker": "Iniciar Sesion.cs",
               "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Iniciar Sesion.cs",
               "RelativeToolTip": "Iniciar Sesion.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAtwCMAAAAyAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAkwEIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T17:43:20.585Z",
+              "WhenOpened": "2024-09-05T23:18:12.834Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "T:\\JM_ES\\Desktop\\Seminario-I\\WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T17:33:31.312Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 67,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
