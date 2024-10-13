@@ -1,13 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WindowsFormsApp1",
-    "\\WindowsFormsApp1\\bin",
-    "\\WindowsFormsApp1\\bin\\Debug",
-    "\\WindowsFormsApp1\\obj",
-    "\\WindowsFormsApp1\\obj\\Debug",
-    "\\WindowsFormsApp1\\obj\\Debug\\TempPE"
+    "\\Antioquia",
+    "\\Datos_",
+    "\\Logica_"
   ],
-  "SelectedNode": "\\WindowsFormsApp1\\obj\\Debug\\WindowsFormsApp1.exe",
+  "SelectedNode": "\\Antioquia\\ListaDeReservas.cs",
   "PreviewInSolutionExplorer": false
 }
