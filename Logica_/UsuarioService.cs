@@ -16,16 +16,14 @@ namespace Logica_
         /// <param name="usuario">recibe el parametro usuario del formulario</param>
         /// <exception cref="ArgumentException">muestra errores de validadicion</exception>
         public void RegistrarUsuario(UsuarioMaster usuario)
-        { 
+        {
+            List<string> errores = ValidarUsuario(usuario);
 
-                List<string> errores = ValidarUsuario(usuario);
-
-                if (errores.Count > 0)
-                {
-                    // Lanzamos una excepción con los errores encontrados
-                    throw new ArgumentException(string.Join(",\n ", errores));
-                }
- 
+            if (errores.Count > 0)
+            {
+                // Lanzamos una excepción con los errores encontrados
+                throw new ArgumentException(string.Join(",\n ", errores));
+            }
         }
         /// <summary>
         /// Valida el tipo de Usuariomaster
@@ -41,15 +39,11 @@ namespace Logica_
             {
                 errores.Add("El nombre de usuario y/o contraseñas estan vacios.");
             }
-             else if (!usuario.Usuario.Equals("antioquia") || !usuario.Contraseña.Equals("1234") )
+            else if (!usuario.Usuario.Equals("antioquia") || !usuario.Contraseña.Equals("1234"))
             {
                 errores.Add("Usuario y/o contraseña invalido");
             }
-
             return errores;
         }
-
-
-
     }
 }

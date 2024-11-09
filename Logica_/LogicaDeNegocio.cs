@@ -28,6 +28,7 @@ namespace Logica_
         {
             return crud.ObtenerReservas();
         }
+
         /// <summary>
         /// este metodo agraga datos 
         /// </summary>
@@ -37,6 +38,7 @@ namespace Logica_
         {
             crud.CreateData(reserva);
         }
+
         /// <summary>
         /// este metodo actualiza datos
         /// </summary>
@@ -46,6 +48,7 @@ namespace Logica_
         {
             crud.UpdateData(id,reserva);
         }
+
         /// <summary>
         /// este metodo elimina datos
         /// </summary>

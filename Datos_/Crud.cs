@@ -26,7 +26,7 @@ namespace Datos_
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                using (var command = new MySqlCommand("SELECT * FROM Reservas", connection))
+                using (var command = new MySqlCommand("SELECT * FROM Reservas ORDER BY Fecha ASC,Hora ASC ", connection))
                 {
                     using (var reader = command.ExecuteReader())
                     {

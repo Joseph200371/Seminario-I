@@ -33,112 +33,121 @@ namespace Antioquia
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaDeReservas));
-            btnVolver = new Button();
-            dgvReservaciones = new DataGridView();
-            btnEliminar = new Button();
-            btnEditar = new Button();
-            btnGuardar = new Button();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            pnLeft = new Panel();
+            btnEliminar = new FontAwesome.Sharp.IconButton();
+            btnEditar = new FontAwesome.Sharp.IconButton();
+            btnNuevaReserva = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            dtpHora = new DateTimePicker();
-            dtpFecha = new DateTimePicker();
-            txtEmail = new TextBox();
-            txtTelefono = new TextBox();
-            txtApellido = new TextBox();
-            txtNombre = new TextBox();
-            lblHora = new Label();
-            ldlFecha = new Label();
-            lblTipoEvento = new Label();
-            lblEmails = new Label();
-            lblTelefono = new Label();
-            lblApellido = new Label();
-            lblNombre = new Label();
-            cbxTipodeEvento = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dgvReservaciones).BeginInit();
+            pnTop = new Panel();
+            dgvReservaciones = new DataGridView();
+            pnFormHijo = new Panel();
+            pnLeft.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvReservaciones).BeginInit();
             SuspendLayout();
             // 
-            // btnVolver
+            // pnLeft
             // 
-            btnVolver.Location = new Point(27, 273);
-            btnVolver.Margin = new Padding(3, 2, 3, 2);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(156, 22);
-            btnVolver.TabIndex = 0;
-            btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = true;
-            btnVolver.Click += btnVolver_Click;
-            // 
-            // dgvReservaciones
-            // 
-            dgvReservaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReservaciones.Location = new Point(3, 46);
-            dgvReservaciones.Margin = new Padding(3, 2, 3, 2);
-            dgvReservaciones.Name = "dgvReservaciones";
-            dgvReservaciones.RowHeadersWidth = 51;
-            dgvReservaciones.Size = new Size(735, 141);
-            dgvReservaciones.TabIndex = 4;
+            pnLeft.BackColor = Color.FromArgb(100, 0, 142);
+            pnLeft.Controls.Add(btnEliminar);
+            pnLeft.Controls.Add(btnEditar);
+            pnLeft.Controls.Add(btnNuevaReserva);
+            pnLeft.Controls.Add(panel1);
+            pnLeft.Dock = DockStyle.Left;
+            pnLeft.Location = new Point(0, 0);
+            pnLeft.Name = "pnLeft";
+            pnLeft.Size = new Size(216, 451);
+            pnLeft.TabIndex = 4;
             // 
             // btnEliminar
             // 
-            btnEliminar.BackColor = Color.Red;
-            btnEliminar.Location = new Point(27, 247);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
+            btnEliminar.BackColor = Color.Transparent;
+            btnEliminar.Dock = DockStyle.Top;
+            btnEliminar.FlatAppearance.BorderColor = Color.Red;
+            btnEliminar.FlatAppearance.BorderSize = 2;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = Color.Red;
+            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            btnEliminar.IconColor = Color.Red;
+            btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEliminar.IconSize = 25;
+            btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEliminar.Location = new Point(0, 284);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(156, 22);
-            btnEliminar.TabIndex = 2;
+            btnEliminar.Size = new Size(216, 34);
+            btnEliminar.TabIndex = 0;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
+            btnEliminar.MouseEnter += btnEliminar_MouseEnter;
+            btnEliminar.MouseLeave += btnEliminar_MouseLeave;
             // 
             // btnEditar
             // 
-            btnEditar.BackColor = Color.FromArgb(192, 255, 192);
-            btnEditar.Location = new Point(27, 221);
-            btnEditar.Margin = new Padding(3, 2, 3, 2);
+            btnEditar.Dock = DockStyle.Top;
+            btnEditar.FlatAppearance.BorderSize = 2;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnEditar.ForeColor = Color.LightGreen;
+            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btnEditar.IconColor = Color.LightGreen;
+            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEditar.IconSize = 25;
+            btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditar.Location = new Point(0, 250);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(156, 22);
-            btnEditar.TabIndex = 3;
+            btnEditar.Size = new Size(216, 34);
+            btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
+            btnEditar.MouseEnter += btnEditar_MouseEnter;
+            btnEditar.MouseLeave += btnEditar_MouseLeave;
             // 
-            // btnGuardar
+            // btnNuevaReserva
             // 
-            btnGuardar.BackColor = Color.FromArgb(255, 255, 192);
-            btnGuardar.Location = new Point(551, 172);
-            btnGuardar.Margin = new Padding(3, 2, 3, 2);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(82, 22);
-            btnGuardar.TabIndex = 17;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
+            btnNuevaReserva.Dock = DockStyle.Top;
+            btnNuevaReserva.FlatAppearance.BorderSize = 2;
+            btnNuevaReserva.FlatStyle = FlatStyle.Flat;
+            btnNuevaReserva.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevaReserva.ForeColor = Color.FromArgb(255, 128, 0);
+            btnNuevaReserva.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnNuevaReserva.IconColor = Color.FromArgb(255, 128, 0);
+            btnNuevaReserva.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnNuevaReserva.IconSize = 25;
+            btnNuevaReserva.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNuevaReserva.Location = new Point(0, 216);
+            btnNuevaReserva.Name = "btnNuevaReserva";
+            btnNuevaReserva.Size = new Size(216, 34);
+            btnNuevaReserva.TabIndex = 1;
+            btnNuevaReserva.Text = "Nueva Reserva";
+            btnNuevaReserva.UseVisualStyleBackColor = true;
+            btnNuevaReserva.Click += btnNuevaReserva_Click;
+            btnNuevaReserva.MouseEnter += btnNuevaReserva_MouseEnter;
+            btnNuevaReserva.MouseLeave += btnNuevaReserva_MouseLeave;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(7, 28, 112);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnEliminar);
-            panel1.Controls.Add(btnEditar);
-            panel1.Controls.Add(btnVolver);
-            panel1.Dock = DockStyle.Left;
+            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(216, 451);
-            panel1.TabIndex = 4;
+            panel1.Size = new Size(216, 216);
+            panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = Properties.Resources._453650905_1609472593166796_4331187445224533546_n;
-            pictureBox1.InitialImage = Properties.Resources._453650905_1609472593166796_4331187445224533546_n;
-            pictureBox1.Image = Image.FromFile(@"T:\JM_ES\Desktop\Antioquia V3.0\Antioquia\Resources\logo.jpg");
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = null;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(216, 216);
@@ -146,219 +155,96 @@ namespace Antioquia
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // panel2
+            // pnTop
             // 
-            panel2.BackColor = Color.FromArgb(7, 28, 112);
-            panel2.Controls.Add(dgvReservaciones);
-            panel2.Dock = DockStyle.Top;
-            panel2.ForeColor = SystemColors.ControlLight;
-            panel2.Location = new Point(216, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(741, 216);
-            panel2.TabIndex = 5;
+            pnTop.BackColor = Color.FromArgb(68, 121, 171);
+            pnTop.Controls.Add(dgvReservaciones);
+            pnTop.Dock = DockStyle.Top;
+            pnTop.ForeColor = SystemColors.ControlLight;
+            pnTop.Location = new Point(216, 0);
+            pnTop.Name = "pnTop";
+            pnTop.Size = new Size(741, 216);
+            pnTop.TabIndex = 5;
             // 
-            // panel3
+            // dgvReservaciones
             // 
-            panel3.BackColor = Color.FromArgb(7, 28, 112);
-            panel3.Controls.Add(dtpHora);
-            panel3.Controls.Add(dtpFecha);
-            panel3.Controls.Add(txtEmail);
-            panel3.Controls.Add(txtTelefono);
-            panel3.Controls.Add(txtApellido);
-            panel3.Controls.Add(txtNombre);
-            panel3.Controls.Add(lblHora);
-            panel3.Controls.Add(ldlFecha);
-            panel3.Controls.Add(lblTipoEvento);
-            panel3.Controls.Add(lblEmails);
-            panel3.Controls.Add(lblTelefono);
-            panel3.Controls.Add(lblApellido);
-            panel3.Controls.Add(lblNombre);
-            panel3.Controls.Add(btnGuardar);
-            panel3.Controls.Add(cbxTipodeEvento);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(216, 215);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(741, 236);
-            panel3.TabIndex = 6;
+            dgvReservaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvReservaciones.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvReservaciones.BackgroundColor = Color.FromArgb(45, 66, 91);
+            dgvReservaciones.BorderStyle = BorderStyle.None;
+            dgvReservaciones.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvReservaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvReservaciones.ColumnHeadersHeight = 30;
+            dgvReservaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvReservaciones.Dock = DockStyle.Top;
+            dgvReservaciones.EnableHeadersVisualStyles = false;
+            dgvReservaciones.GridColor = Color.SteelBlue;
+            dgvReservaciones.Location = new Point(0, 0);
+            dgvReservaciones.Name = "dgvReservaciones";
+            dgvReservaciones.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReservaciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvReservaciones.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dgvReservaciones.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgvReservaciones.Size = new Size(741, 213);
+            dgvReservaciones.TabIndex = 0;
             // 
-            // dtpHora
+            // pnFormHijo
             // 
-            dtpHora.CalendarForeColor = SystemColors.ActiveCaption;
-            dtpHora.Format = DateTimePickerFormat.Time;
-            dtpHora.Location = new Point(551, 39);
-            dtpHora.Margin = new Padding(3, 2, 3, 2);
-            dtpHora.Name = "dtpHora";
-            dtpHora.Size = new Size(69, 23);
-            dtpHora.TabIndex = 31;
-            // 
-            // dtpFecha
-            // 
-            dtpFecha.Format = DateTimePickerFormat.Short;
-            dtpFecha.Location = new Point(307, 170);
-            dtpFecha.Margin = new Padding(3, 2, 3, 2);
-            dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(170, 23);
-            dtpFecha.TabIndex = 30;
-            dtpFecha.Value = new DateTime(2024, 9, 10, 0, 0, 0, 0);
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(307, 39);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(171, 23);
-            txtEmail.TabIndex = 29;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Location = new Point(60, 170);
-            txtTelefono.Margin = new Padding(3, 2, 3, 2);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(153, 23);
-            txtTelefono.TabIndex = 28;
-            // 
-            // txtApellido
-            // 
-            txtApellido.Location = new Point(61, 105);
-            txtApellido.Margin = new Padding(3, 2, 3, 2);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(152, 23);
-            txtApellido.TabIndex = 27;
-            // 
-            // txtNombre
-            // 
-            txtNombre.Location = new Point(60, 39);
-            txtNombre.Margin = new Padding(3, 2, 3, 2);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(152, 23);
-            txtNombre.TabIndex = 26;
-            // 
-            // lblHora
-            // 
-            lblHora.AutoSize = true;
-            lblHora.ForeColor = SystemColors.Control;
-            lblHora.Location = new Point(551, 13);
-            lblHora.Name = "lblHora";
-            lblHora.Size = new Size(42, 15);
-            lblHora.TabIndex = 25;
-            lblHora.Text = " Hora :";
-            // 
-            // ldlFecha
-            // 
-            ldlFecha.AutoSize = true;
-            ldlFecha.ForeColor = SystemColors.Control;
-            ldlFecha.Location = new Point(307, 144);
-            ldlFecha.Name = "ldlFecha";
-            ldlFecha.Size = new Size(44, 15);
-            ldlFecha.TabIndex = 24;
-            ldlFecha.Text = "Fecha :";
-            // 
-            // lblTipoEvento
-            // 
-            lblTipoEvento.AutoSize = true;
-            lblTipoEvento.ForeColor = SystemColors.Control;
-            lblTipoEvento.Location = new Point(307, 78);
-            lblTipoEvento.Name = "lblTipoEvento";
-            lblTipoEvento.Size = new Size(91, 15);
-            lblTipoEvento.TabIndex = 23;
-            lblTipoEvento.Text = "Tipo de Evento :";
-            // 
-            // lblEmails
-            // 
-            lblEmails.AutoSize = true;
-            lblEmails.ForeColor = SystemColors.Control;
-            lblEmails.Location = new Point(307, 13);
-            lblEmails.Name = "lblEmails";
-            lblEmails.Size = new Size(42, 15);
-            lblEmails.TabIndex = 22;
-            lblEmails.Text = "Email :";
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.ForeColor = SystemColors.Control;
-            lblTelefono.Location = new Point(60, 144);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(58, 15);
-            lblTelefono.TabIndex = 21;
-            lblTelefono.Text = "Telefono :";
-            // 
-            // lblApellido
-            // 
-            lblApellido.AutoSize = true;
-            lblApellido.ForeColor = SystemColors.Control;
-            lblApellido.Location = new Point(60, 78);
-            lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(57, 15);
-            lblApellido.TabIndex = 20;
-            lblApellido.Text = "Apellido :";
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.ForeColor = SystemColors.Control;
-            lblNombre.Location = new Point(61, 13);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(57, 15);
-            lblNombre.TabIndex = 19;
-            lblNombre.Text = "Nombre :";
-            // 
-            // cbxTipodeEvento
-            // 
-            cbxTipodeEvento.FormattingEnabled = true;
-            cbxTipodeEvento.Items.AddRange(new object[] { "Cumpleaños", "Fiesta de 15", "Evento Empresarial", "Otros" });
-            cbxTipodeEvento.Location = new Point(307, 105);
-            cbxTipodeEvento.Margin = new Padding(3, 2, 3, 2);
-            cbxTipodeEvento.Name = "cbxTipodeEvento";
-            cbxTipodeEvento.Size = new Size(170, 23);
-            cbxTipodeEvento.TabIndex = 18;
+            pnFormHijo.BackColor = Color.FromArgb(68, 121, 171);
+            pnFormHijo.Dock = DockStyle.Bottom;
+            pnFormHijo.Location = new Point(216, 215);
+            pnFormHijo.Name = "pnFormHijo";
+            pnFormHijo.Size = new Size(741, 236);
+            pnFormHijo.TabIndex = 6;
             // 
             // ListaDeReservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(957, 451);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(pnFormHijo);
+            Controls.Add(pnTop);
+            Controls.Add(pnLeft);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ListaDeReservas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ListaDeReservas";
-            ((System.ComponentModel.ISupportInitialize)dgvReservaciones).EndInit();
+            pnLeft.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            pnTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvReservaciones).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button btnVolver;
-        private Button btnEliminar;
-        private Button btnEditar;
-        private Button btnGuardar;
-        private DataGridView dgvReservaciones;
-        private Label lblNombre;
-        private Label lblApellido;
-        private Label lblTelefono;
-        private Label lblEmails;
-        private Label lblTipoEvento;
-        private Label ldlFecha;
-        private Label lblHora;
-        private TextBox txtNombre;
-        private TextBox txtApellido;
-        private TextBox txtTelefono;
-        private TextBox txtEmail;
-        private ComboBox cbxTipodeEvento;
-        private DateTimePicker dtpFecha;
-        private DateTimePicker dtpHora;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel pnLeft;
+        private Panel pnTop;
+        private Panel pnFormHijo;
         private PictureBox pictureBox1;
-
+        private DataGridView dgvReservaciones;
+        private Panel panel1;
+        private FontAwesome.Sharp.IconButton btnEliminar;
+        private FontAwesome.Sharp.IconButton btnEditar;
+        private FontAwesome.Sharp.IconButton btnNuevaReserva;
     }
 }

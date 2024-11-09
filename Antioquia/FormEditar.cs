@@ -1,20 +1,31 @@
 ﻿using Datos_;
 using Logica_;
+using Mysqlx.Datatypes;
 using System;
-using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Antioquia
 {
-    public partial class cargaReservas : Form
+    public partial class FormEditar : Form
     {
         // Instancia de LogicaDeNegocio para usar sus métodos
         private LogicaDeNegocio logicaNegocio = new LogicaDeNegocio();
 
         // Referencia al formulario con el DataGridView
-        private ListaDeReservas formReservas;
+        private ListaDeReservas formEditarReserva;
 
-        public cargaReservas(ListaDeReservas formReservas)
+        /// <summary>
+        /// Constructor de la clase FormEditar.
+        /// Inicializa componentes, configura el DateTimePicker.
+        /// </summary>
+        public FormEditar(ListaDeReservas formEditarReserva)
         {
             InitializeComponent();
             // Se inicializa DateTimePicker para que solo muestre la hora
@@ -24,21 +35,17 @@ namespace Antioquia
             Controls.Add(dtpHora);
 
             // Asignar la referencia del formulario de reservas
-            this.formReservas = formReservas;
+            this.formEditarReserva = formEditarReserva;
         }
 
         /// <summary>
-        /// Método que se ejecuta al hacer clic en el botón de reserva.
-        /// Valida los datos del formulario y agrega una nueva reserva.
+        /// Evento que maneja el clic en el botón "Confirmar". Actualiza los datos de una reserva.
         /// </summary>
-        private void btnReserva_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
             {
-                // Validar los datos antes de proceder
-                ValidarDatos();
-
-                // Instancio la clase Reserva en una variable nuevaReserva
+                // Crear una instancia de Reserva y asignar valores desde los TextBox
                 Reserva nuevaReserva = new Reserva
                 {
                     Nombre = txtNombre.Text.Trim(),
@@ -50,91 +57,56 @@ namespace Antioquia
                     Hora = dtpHora.Value.ToString("HH:mm")
                 };
 
-                // Envío el dato del Tipo Reserva al método AgregarDato
-                logicaNegocio.AgregarDato(nuevaReserva);
+                // Selecciona la celda del ID de la reserva para actualizar
+                foreach (DataGridViewCell celda in formEditarReserva.ObtenerReservasSeleccionadas())
+                {
+                    //int idReserva = int.Parse(celda.Value.ToString());
+                    object valorCelda = celda.Value;
+                    string valor = valorCelda?.ToString() ?? "N/A";
+                    // Confirmación antes de Guardar
+                    var confirmResult = MessageBox.Show("¿Estás seguro de que deseas guardar esta reserva?",
+                                                         "Confirmar Guardado",
+                                                         MessageBoxButtons.YesNo);
 
-                // Llamar al método de actualización del DataGridView en el otro formulario
-                formReservas.ActualizarReservaciones();
-
-                // Limpiar los campos
-                LimpiarCampos();
-                MessageBox.Show("Reserva agregada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        //logicaNegocio.ActualizarDato(idReserva, nuevaReserva);
+                        logicaNegocio.ActualizarDato(int.Parse(valor), nuevaReserva);
+                        formEditarReserva.ActualizarDataGridView();  // Actualizar el DataGridView en ListaDeReservas
+                        MessageBox.Show("Reserva actualizada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al agregar reserva: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al actualizar reserva: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// Valida todos los datos del formulario antes de proceder con la reserva.
-        /// </summary>
-        private void ValidarDatos()
+        public void CargarReserva(int idReserva)
         {
-            // Validar Nombre
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || !SoloLetras(txtNombre.Text))
-            {
-                throw new Exception("El nombre solo debe contener letras.");
-            }
+            var reserva = logicaNegocio.ObtenerReserva();
 
-            // Validar Apellido
-            if (string.IsNullOrWhiteSpace(txtApellido.Text) || !SoloLetras(txtApellido.Text))
+            // Busca la reserva en la lista de reservas obtenida
+            var reservaSeleccionada = reserva.FirstOrDefault(r => r.Id == idReserva);
+            if (reservaSeleccionada != null)
             {
-                throw new Exception("El apellido solo debe contener letras.");
+                // Llena los campos con los datos de la reserva seleccionada
+                txtNombre.Text = reservaSeleccionada.Nombre;
+                txtApellido.Text = reservaSeleccionada.Apellido;
+                txtTelefono.Text = reservaSeleccionada.Telefono;
+                txtEmail.Text = reservaSeleccionada.Email;
+                cbxTipodeEvento.Text = reservaSeleccionada.Tipodeevento;
+                dtpFecha.Text = reservaSeleccionada.Fecha;
+                dtpHora.Text = reservaSeleccionada.Hora;
             }
-
-            // Validar Teléfono
-            if (string.IsNullOrWhiteSpace(txtTelefono.Text) || !SoloNumeros(txtTelefono.Text))
+            else
             {
-                throw new Exception("El teléfono solo debe contener números.");
-            }
-
-            // Validar Correo
-            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !CorreoValido(txtEmail.Text))
-            {
-                throw new Exception("El correo electrónico no es válido.");
-            }
-
-            // Validación de la fecha
-            if (dtpFecha.Value.Date < DateTime.Now.Date)
-            {
-                throw new Exception("La fecha no puede estar en el pasado.");
-            }
-
-            // Validación de la hora
-            if (dtpFecha.Value.Date == DateTime.Now.Date && dtpHora.Value.TimeOfDay < DateTime.Now.TimeOfDay)
-            {
-                throw new Exception("La hora no puede estar en el pasado.");
+                MessageBox.Show("No se encontró la reserva seleccionada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         /// <summary>
-        /// Verifica si el texto solo contiene letras y espacios.
-        /// </summary>
-        private bool SoloLetras(string texto)
-        {
-            return Regex.IsMatch(texto, "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
-        }
-
-        /// <summary>
-        /// Verifica si el texto solo contiene números.
-        /// </summary>
-        private bool SoloNumeros(string texto)
-        {
-            return Regex.IsMatch(texto, "^[0-9]+$");
-        }
-
-        /// <summary>
-        /// Valida si el correo electrónico tiene un formato correcto.
-        /// </summary>
-        private bool CorreoValido(string correo)
-        {
-            // Expresión regular simple para validar correos electrónicos
-            return Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-        }
-
-        /// <summary>
-        /// Limpia los campos del formulario.
+        /// Método para limpiar campos después de actualizar la reserva
         /// </summary>
         private void LimpiarCampos()
         {
@@ -142,14 +114,10 @@ namespace Antioquia
             txtApellido.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
-            // Reiniciar selección del ComboBox
             cbxTipodeEvento.SelectedIndex = -1;
-            // Resetear a la fecha actual
             dtpFecha.Value = DateTime.Now;
-            // Resetear a la hora actual
             dtpHora.Value = DateTime.Now;
         }
-
 
         // Diseño 
 
@@ -184,7 +152,6 @@ namespace Antioquia
         {
             TextBox_Enter(txtEmail, "Email");
         }
-
 
         /// <summary>
         /// Configura el comportamiento al salir de un campo de texto. 
@@ -221,20 +188,18 @@ namespace Antioquia
             TextBox_Leave(txtEmail, "Email");
         }
 
-        //Para el botón de reserva
+        //Para el botón de confirmar
         // Cambia el color del botón cuando el mouse entra en él
-        private void btnReserva_MouseEnter(object sender, EventArgs e)
+        private void btnConfirmar_MouseEnter(object sender, EventArgs e)
         {
-            btnReserva.BackColor = Color.FromArgb(255, 128, 0);
-            btnReserva.ForeColor = Color.Black;
+            btnConfirmar.BackColor = Color.FromArgb(144, 238, 144);
+            btnConfirmar.ForeColor = Color.Black;
         }
         // Restablece el color del botón cuando el mouse sale
-        private void btnReserva_MouseLeave(object sender, EventArgs e)
+        private void btnConfirmar_MouseLeave(object sender, EventArgs e)
         {
-            btnReserva.BackColor = Color.FromArgb(68, 121, 171);
-            btnReserva.ForeColor = Color.FromArgb(255, 128, 0);
+            btnConfirmar.BackColor = Color.FromArgb(68, 121, 171);
+            btnConfirmar.ForeColor = Color.FromArgb(144, 238, 144);
         }
     }
 }
-
-

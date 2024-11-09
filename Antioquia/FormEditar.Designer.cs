@@ -1,6 +1,6 @@
 ﻿namespace Antioquia
 {
-    partial class cargaReservas
+    partial class FormEditar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnReserva = new Button();
+            btnConfirmar = new Button();
             cbxTipodeEvento = new ComboBox();
             lblTipoEvento = new Label();
             lblFecha = new Label();
@@ -40,31 +40,30 @@
             dtpFecha = new DateTimePicker();
             dtpHora = new DateTimePicker();
             lblInfo = new Label();
-            panel1 = new Panel();
+            pnLine = new Panel();
             SuspendLayout();
             // 
-            // btnReserva
+            // btnConfirmar
             // 
-            btnReserva.BackColor = Color.FromArgb(68, 121, 171);
-            btnReserva.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            btnReserva.FlatAppearance.BorderSize = 2;
-            btnReserva.FlatStyle = FlatStyle.Flat;
-            btnReserva.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReserva.ForeColor = Color.FromArgb(255, 128, 0);
-            btnReserva.Location = new Point(534, 181);
-            btnReserva.Margin = new Padding(3, 2, 3, 2);
-            btnReserva.Name = "btnReserva";
-            btnReserva.Size = new Size(97, 35);
-            btnReserva.TabIndex = 0;
-            btnReserva.Text = "Reservar";
-            btnReserva.UseVisualStyleBackColor = false;
-            btnReserva.Click += btnReserva_Click;
-            btnReserva.MouseEnter += btnReserva_MouseEnter;
-            btnReserva.MouseLeave += btnReserva_MouseLeave;
+            btnConfirmar.BackColor = Color.FromArgb(68, 121, 171);
+            btnConfirmar.FlatAppearance.BorderColor = Color.LightGreen;
+            btnConfirmar.FlatAppearance.BorderSize = 2;
+            btnConfirmar.FlatStyle = FlatStyle.Flat;
+            btnConfirmar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConfirmar.ForeColor = Color.LightGreen;
+            btnConfirmar.Location = new Point(534, 182);
+            btnConfirmar.Margin = new Padding(3, 2, 3, 2);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(101, 34);
+            btnConfirmar.TabIndex = 0;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += btnConfirmar_Click;
+            btnConfirmar.MouseEnter += btnConfirmar_MouseEnter;
+            btnConfirmar.MouseLeave += btnConfirmar_MouseLeave;
             // 
             // cbxTipodeEvento
             // 
-            cbxTipodeEvento.Font = new Font("Century Gothic", 9.75F);
             cbxTipodeEvento.FormattingEnabled = true;
             cbxTipodeEvento.Items.AddRange(new object[] { "Cumpleaños", "Fiesta de 15", "Evento Empresarial", "Otros" });
             cbxTipodeEvento.Location = new Point(290, 128);
@@ -78,7 +77,6 @@
             // 
             lblTipoEvento.AutoSize = true;
             lblTipoEvento.BackColor = Color.Transparent;
-            lblTipoEvento.Font = new Font("Century Gothic", 9.75F);
             lblTipoEvento.ForeColor = SystemColors.Control;
             lblTipoEvento.Location = new Point(290, 101);
             lblTipoEvento.Name = "lblTipoEvento";
@@ -90,7 +88,6 @@
             // 
             lblFecha.AutoSize = true;
             lblFecha.BackColor = Color.Transparent;
-            lblFecha.Font = new Font("Century Gothic", 9.75F);
             lblFecha.ForeColor = SystemColors.Control;
             lblFecha.Location = new Point(290, 167);
             lblFecha.Name = "lblFecha";
@@ -102,7 +99,6 @@
             // 
             lblHora.AutoSize = true;
             lblHora.BackColor = Color.Transparent;
-            lblHora.Font = new Font("Century Gothic", 9.75F);
             lblHora.ForeColor = SystemColors.Control;
             lblHora.Location = new Point(534, 36);
             lblHora.Name = "lblHora";
@@ -112,7 +108,6 @@
             // 
             // txtNombre
             // 
-            txtNombre.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(43, 62);
             txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
@@ -124,7 +119,6 @@
             // 
             // txtApellido
             // 
-            txtApellido.Font = new Font("Century Gothic", 9.75F);
             txtApellido.Location = new Point(44, 128);
             txtApellido.Margin = new Padding(3, 2, 3, 2);
             txtApellido.Name = "txtApellido";
@@ -136,7 +130,6 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Font = new Font("Century Gothic", 9.75F);
             txtTelefono.Location = new Point(43, 193);
             txtTelefono.Margin = new Padding(3, 2, 3, 2);
             txtTelefono.Name = "txtTelefono";
@@ -148,7 +141,6 @@
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Century Gothic", 9.75F);
             txtEmail.Location = new Point(290, 62);
             txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
@@ -160,7 +152,6 @@
             // 
             // dtpFecha
             // 
-            dtpFecha.Font = new Font("Century Gothic", 9.75F);
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.Location = new Point(290, 193);
             dtpFecha.Margin = new Padding(3, 2, 3, 2);
@@ -176,7 +167,7 @@
             dtpHora.Location = new Point(534, 62);
             dtpHora.Margin = new Padding(3, 2, 3, 2);
             dtpHora.Name = "dtpHora";
-            dtpHora.Size = new Size(97, 23);
+            dtpHora.Size = new Size(101, 23);
             dtpHora.TabIndex = 31;
             // 
             // lblInfo
@@ -184,27 +175,27 @@
             lblInfo.AutoSize = true;
             lblInfo.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInfo.ForeColor = Color.DarkGray;
-            lblInfo.Location = new Point(44, 9);
+            lblInfo.Location = new Point(43, 9);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(149, 23);
+            lblInfo.Size = new Size(141, 23);
             lblInfo.TabIndex = 32;
-            lblInfo.Text = "Nueva Reserva";
+            lblInfo.Text = "Editar Reserva";
             // 
-            // panel1
+            // pnLine
             // 
-            panel1.BackColor = Color.DarkGray;
-            panel1.Location = new Point(44, 35);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(149, 4);
-            panel1.TabIndex = 33;
+            pnLine.BackColor = Color.DarkGray;
+            pnLine.Location = new Point(44, 35);
+            pnLine.Name = "pnLine";
+            pnLine.Size = new Size(140, 4);
+            pnLine.TabIndex = 33;
             // 
-            // cargaReservas
+            // FormEditar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(68, 121, 171);
             ClientSize = new Size(659, 233);
-            Controls.Add(panel1);
+            Controls.Add(pnLine);
             Controls.Add(lblInfo);
             Controls.Add(dtpHora);
             Controls.Add(dtpFecha);
@@ -216,17 +207,18 @@
             Controls.Add(lblFecha);
             Controls.Add(lblTipoEvento);
             Controls.Add(cbxTipodeEvento);
-            Controls.Add(btnReserva);
+            Controls.Add(btnConfirmar);
+            Font = new Font("Century Gothic", 9.75F);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "cargaReservas";
-            Text = "cargaReservas";
+            Name = "FormEditar";
+            Text = "FormEditar";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnReserva;
+        private Button btnConfirmar;
         private ComboBox cbxTipodeEvento;
         private Label lblTipoEvento;
         private Label lblFecha;
@@ -238,6 +230,6 @@
         private DateTimePicker dtpFecha;
         private DateTimePicker dtpHora;
         private Label lblInfo;
-        private Panel panel1;
+        private Panel pnLine;
     }
 }
